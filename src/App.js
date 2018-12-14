@@ -1,26 +1,44 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+
+import {
+  Container,
+  Card,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
+
+import SubTotal from "./components/Subtotal/Subtotal";
+
+import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: 100
+    };
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container>
+        <div>
+          <Card className="card">
+            <CardBody>
+              <CardTitle>Shopping Card</CardTitle>
+              <CardSubtitle>Review your Shopping Card</CardSubtitle>
+              <SubTotal price={this.state.total.toFixed(2)} />
+              <CardText />
+              <Button color="dark" block>
+                Button
+              </Button>
+            </CardBody>
+          </Card>
+        </div>
+      </Container>
     );
   }
 }
