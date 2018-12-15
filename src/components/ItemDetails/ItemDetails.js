@@ -15,7 +15,7 @@ export default class ItemDetails extends Component {
           onClick={() => this.setState({ open: !this.state.open })}
         >
           {this.state.open === false ? `See` : `Hide `} item details
-          {this.state.open === false ? ` -` : ` +`}
+          {this.state.open === false ? ` +` : ` -`}
         </Button>
         <Collapse isOpen={this.state.open}>
           <div>
@@ -30,10 +30,14 @@ export default class ItemDetails extends Component {
                 />
               </Media>
               <Media body>
-                <Media heading>
-                  OFM Essentials Racecar-Style Leather Gaming Chair, Red
+                <Media heading className="header">
+                  OFM Essentials Racecar-Style Leather Gaming Chair
                 </Media>
-                <Row>
+                <Row
+                  style={{
+                    textAlign: "end"
+                  }}
+                >
                   <Col xs="6">
                     <strong>{`$${this.props.price}`}</strong>
                     <br />

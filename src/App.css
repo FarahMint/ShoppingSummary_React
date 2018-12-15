@@ -1,12 +1,27 @@
 .card {
   display: flex;
   margin: auto;
-  width: 80%;
+  width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem;
+  background-color: #1c1d1d;
+  color: #fff;
+  /* color: #888888; */
+  color: #ddd;
+  font-weight: 400;
+  line-height: 2;
 }
 
 .price-strike {
   text-decoration-line: line-through;
   color: grey;
+}
+
+hr {
+  background-color: grey;
+}
+
+.header {
+  font-size: 1rem;
+  text-align: center;
 }

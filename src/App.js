@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import {
-  Container,
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle
-} from "reactstrap";
+import { Container, Card, CardText, CardBody, CardTitle } from "reactstrap";
 
 import SubTotal from "./components/Subtotal/Subtotal";
 import PickupSavings from "./components/PickupSavings/PickupSavings";
@@ -75,19 +68,28 @@ class App extends Component {
       <Container>
         <Card className="card">
           <CardBody>
-            <CardTitle>Shopping Card</CardTitle>
-            <CardSubtitle>Review your Shopping Card</CardSubtitle>
+            <CardTitle
+              style={{
+                textAlign: "center",
+                marginBottom: "3rem",
+                textTransform: "uppercase"
+              }}
+            >
+              Shopping Card
+            </CardTitle>
+            <hr />
             <SubTotal price={this.state.total.toFixed(2)} />
             <PickupSavings price={this.state.pickupSaving} />
             <TaxesFees taxes={this.state.taxes.toFixed(2)} />
-            <hr />
-            <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />
-            <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
             <hr />
             <PromoCode
               giveDiscount={() => this.giveDiscountHandler()}
               isDisabled={this.state.disablePromoBtn}
             />
+
+            <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
+            <hr />
+            <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />
             <CardText />
           </CardBody>
         </Card>

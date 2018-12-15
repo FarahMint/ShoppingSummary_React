@@ -7,7 +7,9 @@ export default class Subtotal extends Component {
       <Container>
         <Row>
           <Col xs="6">Subtotal</Col>
-          <Col xs="6">{`$${this.props.price}`}</Col>
+          <Col xs="6" style={{ textAlign: "end" }}>{`$${
+            this.props.price
+          }`}</Col>
         </Row>
       </Container>
     );

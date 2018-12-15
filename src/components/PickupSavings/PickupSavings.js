@@ -40,7 +40,7 @@ export default class PickupSavings extends Component {
               Pickup Savings
             </p>
             <Tooltip
-              placement="top"
+              placement="left"
               isOpen={this.state.tooltipOpen}
               autohide={false}
               target="TooltipExample"
@@ -50,7 +50,9 @@ export default class PickupSavings extends Component {
               savings on to you.
             </Tooltip>
           </Col>
-          <Col xs="6">{`$${this.props.price}`}</Col>
+          <Col xs="6" style={{ textAlign: "end" }}>{`$${
+            this.props.price
+          }`}</Col>
         </Row>
       </Container>
     );

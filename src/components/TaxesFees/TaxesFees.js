@@ -6,9 +6,11 @@ export default class TaxesFees extends Component {
     return (
       <Container>
         <Row>
-          <Col xs="6">Estimated Taxes &amp; fees</Col>
+          <Col xs="6">Taxes &amp; Fees</Col>
 
-          <Col xs="6">{`$${this.props.taxes}`}</Col>
+          <Col xs="6" style={{ textAlign: "end" }}>{`$${
+            this.props.taxes
+          }`}</Col>
         </Row>
       </Container>
     );

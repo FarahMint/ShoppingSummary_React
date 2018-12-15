@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 
-import {
-  Col,
-  Row,
-  Collapse,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from "reactstrap";
+import { Col, Row, Collapse, Button, Form, FormGroup, Input } from "reactstrap";
 
 import { connect } from "react-redux";
 import { handleChange } from "../../actions/promoCodeActions";
@@ -33,9 +24,12 @@ class PromoCode extends Component {
       <div>
         <Button
           color="link"
+          style={{
+            textTransform: "uppercase"
+          }}
           onClick={() => this.setState({ open: !this.state.open })}
         >
-          {this.state.open === false ? `Apply ` : `Hide `} Promo Code
+          {this.state.open === false ? `Use your ` : `Hide `} promocode
           {this.state.open === false ? ` +` : ` -`}
         </Button>
 
@@ -44,9 +38,6 @@ class PromoCode extends Component {
             <Col>
               <Form>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Label for="promoCode" className="mr-sm-2">
-                    Promo Code
-                  </Label>
                   <Input
                     type="text"
                     name="promoCode"
@@ -58,7 +49,6 @@ class PromoCode extends Component {
                 </FormGroup>
 
                 <Button
-                  block
                   color="success"
                   className="btn-round"
                   disabled={this.props.isDisabled}

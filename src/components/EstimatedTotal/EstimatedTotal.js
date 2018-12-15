@@ -7,9 +7,11 @@ export default class EstimatedTotal extends Component {
       <Container>
         <Row>
           <Col xs="6">
-            <h2>Estimated Total</h2>
+            <h4>Estimated Total</h4>
           </Col>
-          <Col xs="6">{`$${this.props.price}`}</Col>
+          <Col xs="6" style={{ textAlign: "end" }}>{`$${
+            this.props.price
+          }`}</Col>
         </Row>
       </Container>
     );
