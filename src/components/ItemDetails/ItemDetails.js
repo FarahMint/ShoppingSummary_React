@@ -22,7 +22,7 @@ export default class ItemDetails extends Component {
             <Media>
               <Media left href="#">
                 <Media
-                  image
+                  image="true"
                   width={100}
                   height={100}
                   src="https://i5.walmartimages.com/asr/58ed28c8-42fa-4966-902c-292940257bb1_1.ef2b733f30c41bfa79d99303e6a11627.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff/"

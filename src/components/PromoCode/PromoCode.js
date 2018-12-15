@@ -11,12 +11,21 @@ import {
   Input
 } from "reactstrap";
 
+import { connect } from "react-redux";
+import { handleChange } from "../../actions/promoCodeActions";
+
 //Redux
 
 class PromoCode extends Component {
   state = {
     open: false,
     value: ""
+  };
+
+  handleChange = e => {
+    // the setState below will be sent to redux
+    // this.setState({ value: e.target.value });
+    this.props.handleChange(e);
   };
 
   render() {
@@ -66,4 +75,11 @@ class PromoCode extends Component {
   }
 }
 
-export default PromoCode;
+const mapStateToProps = state => ({
+  promoCode: state.promoCode.value
+});
+
+export default connect(
+  mapStateToProps,
+  { handleChange }
+)(PromoCode);
