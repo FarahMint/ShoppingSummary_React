@@ -1,11 +1,12 @@
 .card {
   display: flex;
   margin: auto;
-  width: 400px;
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem;
 }
 
-.show-grid {
-  padding-bottom: 1.5rem;
+.price-strike {
+  text-decoration-line: line-through;
+  color: grey;
 }
